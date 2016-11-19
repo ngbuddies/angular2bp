@@ -20,7 +20,7 @@ export class contactComponent implements OnInit {
             .subscribe((data: any[]) => this.myItems = data,
             error => console.log(error),
             () => {
-
+                    console.log(this.myItems);
             }
             );
     }

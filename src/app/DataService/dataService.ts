@@ -14,7 +14,7 @@ export class DataService {
     
     constructor(private _http: Http) {
         let tokenInfo=JSON.parse(localStorage.getItem('tokenInfo'));
-        this.actionUrl = 'https://docs.google.com/forms/d/1oycidtNKvOZnKrtbKPz85bmhCB7YZTx_BM0xbZAU5xI/formResponse'; 
+        this.actionUrl = 'http://reqres.in'; 
         this.headers = new Headers();
         this.headers.append('Accept','application/json, text/plain, */*');
         this.headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
@@ -24,7 +24,8 @@ export class DataService {
  
     public Add = (contactRequest: ContactRequest): Observable<any> => {  
         let options = new RequestOptions({ headers: this.headers }); 
-        return this._http.post(this.actionUrl, objectToParams(contactRequest), { headers: this.headers })
+        let methodname = "/api/users";
+        return this._http.post(this.actionUrl + methodname, objectToParams(contactRequest), { headers: this.headers })
             .map((response: Response) => <any>response.json())
             .catch(this.handleError);
     }

@@ -4,6 +4,8 @@ export class ContactRequest {
     entry_255632019: string;
     entry_546742840: string;
     entry_248907481: string;
+    name:string;
+    job:string;
 
     public constructor() {
         this.entry_509441173 = new Date().getTime().toString();
@@ -11,6 +13,8 @@ export class ContactRequest {
         this.entry_255632019 = '';
         this.entry_546742840 = '';
         this.entry_248907481 = '';
+        this.name = 'test';
+        this.job = 'test';
 
     }
 

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 //Google Analytics
-import {Router, Event, NavigationEnd} from '@angular/router';
-declare let ga:Function;
+import { Router, Event, NavigationEnd,  RouterModule, ActivatedRoute  } from '@angular/router';
+import { Title }                from '@angular/platform-browser';
+
+declare let ga: Function;
 @Component({
     selector: 'body',
     template: '<router-outlet></router-outlet>',
@@ -14,13 +16,31 @@ declare let ga:Function;
   `],
 })
 export class AppComponent {
- constructor(public router:Router) {
+    constructor(public router: Router, private titleService: Title,private route:ActivatedRoute) {
         this.router.events.subscribe(
-            (event:Event) => {
+            (event: Event) => {
                 if (event instanceof NavigationEnd) {
-                  console.log("state Change");
+                    console.log("state Change",event);
+                    this.setTitle(event.url);
                     ga('send', 'pageview', event.urlAfterRedirects);
                 }
             });
+                  console.log(this.router);
+        console.log(this.route);
+        console.log(this.route.params);
+        console.log(this.route.snapshot.params['id']);
+    }
+    public setTitle(newTitle: string) {
+        let title=[];
+        let titleText:string;
+        title=newTitle.split('/');
+        console.log(title);
+        if(title.length>0){
+            titleText=title[1].replace('/','').toUpperCase() + " | " + "NgBuddies";
+        }
+        else{
+            titleText="HOME | NgBuddies";
+        }
+        this.titleService.setTitle(titleText);
     }
 }
