@@ -1,0 +1,47 @@
+<div class="mainbar col-lg-8 col-md-8 col-sm-8 col-xs-12">
+  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 article">
+    <h2><span>Contact</span></h2>
+    <div class="clr"></div>
+    <p>You can find more of my free template designs at my website. For premium commercial designs, you can check out DreamTemplate.com.</p>
+  </div>
+  <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 article">
+    <h2><span>Send us</span> mail</h2>
+    <div class="clr"></div>
+    <form id="sendemail">
+     
+          <div class="form-group has-success has-feedback">
+            <label class="control-label" for="name">Name (required)</label>
+            <input id="name" name="name" type="text" class="form-control" aria-describedby="nameStatus" [(ngModel)]="contactRequest.entry_1743551063"
+            />
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span id="nameStatus" name="nameStatus" class="sr-only">(success)</span>
+          </div>
+      
+        
+         <div class="form-group has-success has-feedback">
+            <label class="control-label" for="email">Email Address (required)</label>
+            <input id="email" name="email" type="text" class="form-control" aria-describedby="emailStatus" [(ngModel)]="contactRequest.entry_255632019"/>
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span id="emailStatus" name="emailStatus" class="sr-only">(success)</span>
+          </div>
+      
+       
+           <div class="form-group has-success has-feedback">
+            <label class="control-label" for="website">Website</label>
+            <input id="website" name="website" type="text" class="form-control" aria-describedby="websiteStatus" [(ngModel)]="contactRequest.entry_546742840"/>
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span id="websiteStatus" name="websiteStatus" class="sr-only">(success)</span>
+          </div>
+     
+          
+          <div class="form-group has-success has-feedback">
+            <label class="control-label" for="website">Your Message</label>
+            <textarea id="message" name="message" rows="3" type="text" class="form-control" aria-describedby="messageStatus" [(ngModel)]="contactRequest.entry_248907481"></textarea>
+            <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span id="messageStatus" name="messageStatus" class="sr-only">(success)</span>
+          </div>
+<button type="button" class="btn btn-success" (click)="addContact()">Success</button>
+
+    </form>
+  </div>
+</div>

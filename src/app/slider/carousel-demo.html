@@ -1,0 +1,26 @@
+    <style>
+ 
+   .img-responsive {
+    max-height: 330px;
+    width: 100%;
+}
+    </style>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+          <slide *ngFor="let slidez of slides; let index=index"
+                 [active]="slidez.active">
+            <img [src]="slidez.image" style="margin:auto;" class="img-responsive">
+     
+            <div class="carousel-caption">
+              <h4>Slide {{index+1}}</h4>
+     
+              <p>{{slidez.text}}</p>
+            </div>
+          </slide>
+        </carousel>
+      </div>
+
+    </div>
+
