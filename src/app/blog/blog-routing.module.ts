@@ -9,14 +9,14 @@ const routes: Routes = [
         path: '',
         component: blogComponent,
         data: {
-            title: 'blog'
+            title: 'Blog'
         }
     },
     {
         path: ':id',
         component: blogComponent,
         data: {
-            title: 'blog'
+            title: 'Blog'
         }
     },
    

@@ -46917,34 +46917,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var AppComponent = (function () {
     function AppComponent(router, titleService, route) {
-        var _this = this;
         this.router = router;
         this.titleService = titleService;
         this.route = route;
-        this.router.events.subscribe(function (event) {
-            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* NavigationEnd */]) {
-                console.log("state Change", event);
-                _this.setTitle(event.url);
-                ga('send', 'pageview', event.urlAfterRedirects);
-            }
-        });
-        console.log(this.router);
-        console.log(this.route);
-        console.log(this.route.params);
-        console.log(this.route.snapshot.params['id']);
+        this.setTitle();
     }
-    AppComponent.prototype.setTitle = function (newTitle) {
-        var title = [];
-        var titleText;
-        title = newTitle.split('/');
-        console.log(title);
-        if (title.length > 0) {
-            titleText = title[1].replace('/', '').toUpperCase() + " | " + "NgBuddies";
+    AppComponent.prototype.setTitle = function () {
+        var _this = this;
+        this.router.events.subscribe(function (event) {
+            var title;
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* NavigationEnd */]) {
+                ga('send', 'pageview', event.urlAfterRedirects);
+                title = _this.getDeepestTitle(_this.router.routerState.snapshot.root) + " | NGBuddies";
+            }
+            _this.titleService.setTitle(title);
+        });
+    };
+    AppComponent.prototype.getDeepestTitle = function (routeSnapshot) {
+        var title = routeSnapshot.data ? routeSnapshot.data['title'] : 'Home';
+        if (routeSnapshot.firstChild) {
+            title = this.getDeepestTitle(routeSnapshot.firstChild) || title;
         }
-        else {
-            titleText = "HOME | NgBuddies";
-        }
-        this.titleService.setTitle(titleText);
+        return title;
     };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -65587,7 +65581,7 @@ var routes = [
         path: '',
         component: __WEBPACK_IMPORTED_MODULE_2__about_component__["a" /* aboutComponent */],
         data: {
-            title: 'about'
+            title: 'About'
         }
     },
 ];
@@ -65773,14 +65767,14 @@ var routes = [
         path: '',
         component: __WEBPACK_IMPORTED_MODULE_2__blog_component__["a" /* blogComponent */],
         data: {
-            title: 'blog'
+            title: 'Blog'
         }
     },
     {
         path: ':id',
         component: __WEBPACK_IMPORTED_MODULE_2__blog_component__["a" /* blogComponent */],
         data: {
-            title: 'blog'
+            title: 'Blog'
         }
     },
 ];
@@ -66091,7 +66085,7 @@ var routes = [
         path: '',
         component: __WEBPACK_IMPORTED_MODULE_2__support_component__["a" /* supportComponent */],
         data: {
-            title: 'support'
+            title: 'Support'
         }
     },
 ];

@@ -9,7 +9,7 @@ const routes: Routes = [
         path: '',
         component: supportComponent,
         data: {
-            title: 'support'
+            title: 'Support'
         }
     },
 ];
