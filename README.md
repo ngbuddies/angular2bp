@@ -1,3 +1,8 @@
+An opinionated starter for Angular2 projects.
+Quick Start
+Live Demo:http://ngbuddies.com
+Local View:http://localhost:4200
+
 # Newproject
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
@@ -29,3 +34,60 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## node version
+
+install latest version of node check current version of node by 'node -v' and > 6.0 is good with angular2
+
+## npm version
+
+install latest version of npm check current version of node by 'npm -v' and > 3.0 is good with angular2
+
+## run application on any port
+
+By default project will run on localhost:4200 and if you want to change default port there is two way
+
+1) run this command ng serve --port xxxx
+2) add .ember-cli file in root directory and set json object like ;{port:3001}
+
+
+When you're ready to push your app into production, just run the compile command:
+
+$ ng build
+
+This will concatenate and minify your sources and place them by default into the dist/ directory. There will only be some files: jss,htnl,css,assets(font,css). If you use any assets (src/assets/) then they will be copied to dist/ as is.
+
+
+This is a project that is not broad in scope, so there's not really much of a wish list here. But I would like to see a couple of things:
+
+I'd like it to be a little simpler. I want this to be a universal starting point. If someone is starting a new Angular2 project, she should be able to clone, merge, or download its source and immediately start doing what she needs without renaming a bunch of files and methods or deleting spare parts. What I have works for a first release, but I just think there is a little too much here right now.
+
+Naturally, I am open to all manner of ideas and suggestions. See the "Contributing" section below.
+To Do
+
+See the issues list. And feel free to submit your own!
+Contributing
+
+This is an opinionated starter, but the opinions are fluid and evidence-based. Don't like the way I did something? Think you know of a better way? Have an idea to make this more useful? Let me know! You can contact me through all the usual channels or you can open an issue on the GitHub page. If you're feeling ambitious, you can even submit a pull request - how thoughtful of you!
+
+Make sure to check out the Contributing Guide.
+
+So join the team! We're good people.
+
+Thank you messages for team members: 
+
+I asked for commitment, you gave me dedication. I asked for obedience, you gave me authority. I asked for cooperation, you gave me support. Thanks for everything, 
+
+Liyakat Hussain
+Dileep Kumar
+Hariram Choudhary
+Lokendra Singh and Clover It Services Team .
+
+
+Your Best Wisher
+Akshay Bohra
+(Clover It Services Pvt Ltd,Jaipur)
+
+
+
+

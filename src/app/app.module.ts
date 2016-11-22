@@ -39,5 +39,8 @@ import { sidebarComponent }          from './layouts/sidebar.component';
     }],
     bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+
+
+ }
 
