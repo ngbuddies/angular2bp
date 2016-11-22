@@ -78,20 +78,25 @@ This is an opinionated starter, but the opinions are fluid and evidence-based. D
 Make sure to check out the Contributing Guide.
 <br />
 So join the team! We're good people.
-
+<br />
 ## Thank you messages for team members: 
 <br />
 I asked for commitment, you gave me dedication. I asked for obedience, you gave me authority. I asked for cooperation, you gave me support. Thanks for everything, 
 <br />
 Liyakat Hussain
+<br />
 Dileep Kumar
+<br />
 Hariram Choudhary
-Lokendra Singh and Clover It Services Team .
-
+<br />
+Lokendra Singh and Team .
+<br />
 
 ## Your Best Wisher
-## Akshay Bohra
-## (Clover It Services Pvt Ltd,Jaipur)
+<span style="font-size: 16px;">Your Best Wisher<br />
+    Akshay Bohra<br />
+
+</span>
 
 
 
